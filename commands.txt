@@ -1,0 +1,9 @@
+Command List
+- Directory Management
+    mkdir - Verzeichniss erstellen
+    rmdir - Verzeichniss Löschen
+    ls - Alle datein auflisten
+    cd - Zu einem anderen Verzeichniss navigieren
+- File Managment
+    touch -
+    rm -
