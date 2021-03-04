@@ -16,6 +16,10 @@ def makedir(name):
 def removedir(name):
     try:
         os.rmdir(name)
+    except FileNotFoundError:
+        print("Die Datei wurde nicht gefunden")
+    except NotADirectoryError:
+        print("This is not a Directory")
     except OSError:
         print("Das Verzeichniss konnte nicht gelöscht werden")
     else:

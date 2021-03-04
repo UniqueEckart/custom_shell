@@ -5,6 +5,7 @@ from Shell.Commands.directory import move
 from Shell.Commands.directory import removedir
 from Shell.Commands.filemanagment import touch
 from Shell.Commands.filemanagment import deletefile
+from Shell.Commands.filemanagment import ren
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 os.chdir(desktop)
@@ -16,6 +17,7 @@ dictionary = {
     'rmdir': removedir,
     'touch': touch,
     'rm': deletefile,
+    'ren': ren,
             }
 
 while True:
@@ -34,5 +36,7 @@ while True:
             dictionary[split_input[0]](split_input[1])
         if split_input[0] == "rm":
             dictionary[split_input[0]](split_input[1])
+        if split_input[0] == "ren":
+            dictionary[split_input[0]](split_input[1], split_input[2])
     else:
-        print("There is no command such as " + split_input[0])
+        print("Es gibt keinen Command namens " + split_input[0])
